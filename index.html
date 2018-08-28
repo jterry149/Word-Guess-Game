@@ -9,12 +9,28 @@
     <script src="game.js"></script>
 </head>
 <body>
-<!--================ Navbar With Logo ===================================-->
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="#" width="30" height="30" alt="">
-        </a>
-      </nav>
-    
+<!--================ Main Body Content ===================================-->
+    <header>
+        <h1>Outdoor Adventure Word Game</h1>
+    </header>
+    <div class="wrapper">
+             <p>Use the alaphabet to guess the hidden adventure word. Or click the button to reveal a clue to the word. </p>
+    </div>
+    <div class="wrapper">
+        <div id="buttons"></div>  
+            <p id="catagoryName"></p>
+            <div id="hold"></div>
+                <p id="myStrikes"></p>
+            <p id="clue">Clue -</p>  
+              <!--<canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>*-->
+        <div class="container">
+            <button id="hint">Hint</button>
+            <button id="reset">Play again</button>
+        </div>
+    </div>
+         
+         
+         
+         
 </body>
 </html>
