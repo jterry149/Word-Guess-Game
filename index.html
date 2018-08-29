@@ -3,34 +3,48 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Word Guess Game</title>
+    <title>Marvel Hangman Game</title>
+<!--==== Media viewport tag =====-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="game.js"></script>
+<!--==== Bootstrap Stylesheet link =====-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--==== Stylesheets =====-->
+    <link rel="stylesheet" href="assets/css/style.css">
+<!--==== Scripts =========-->
+    <script src="assets/javascript/game.js"></script>
+ <!-- Bootstrap core JavaScript================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
 </head>
 <body>
-<!--================ Main Body Content ===================================-->
-    <header>
-        <h1>Outdoor Adventure Word Game</h1>
-    </header>
-    <div class="wrapper">
-             <p>Use the alaphabet to guess the hidden adventure word. Or click the button to reveal a clue to the word. </p>
+<!--================= Main Content Container ==============================-->    
+<main role="main" class="container">
+    <!--=== Content Instructions ===-->    
+    <div class="starter-template">
+        <h1 id="logo">Marvel Hangman Game</h1>
+            <h2>Instructions</h2>
+                <p class="lead">Use the alphabet to guess the hidden marvel character.<br> 
+                    Or click the button to reveal a clue to the character.
+                </p>
     </div>
     <div class="wrapper">
         <div id="buttons"></div>  
             <p id="catagoryName"></p>
-            <div id="hold"></div>
-                <p id="myStrikes"></p>
+        <div id="hold"></div>
+            <p id="mystrikes"></p>
             <p id="clue">Clue -</p>  
-              <!--<canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>*-->
+        <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
         <div class="container">
             <button id="hint">Hint</button>
             <button id="reset">Play again</button>
         </div>
     </div>
-         
-         
-         
-         
+</main>
+<!--================ End of Main Content Container =========================-->  
 </body>
+<!--============= Javascripts Links for the Game ===============================-->
+        
+            
+
+        
 </html>
