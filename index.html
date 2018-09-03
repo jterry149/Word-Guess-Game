@@ -4,47 +4,51 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Marvel Hangman Game</title>
-<!--==== Media viewport tag =====-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--==== Media viewport tag =====-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <!--==== Bootstrap Stylesheet link =====-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!--==== Stylesheets =====-->
     <link rel="stylesheet" href="assets/css/style.css">
 <!--==== Scripts =========-->
-    <script src="assets/javascript/game.js"></script>
- <!-- Bootstrap core JavaScript================================================== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <script src="assets/javascript/game.js" type="text/javascript"></script> 
 </head>
 <body>
 <!--================= Main Content Container ==============================-->    
-<main role="main" class="container">
-    <!--=== Content Instructions ===-->    
-    <div class="starter-template">
-        <h1 id="logo">Marvel Hangman Game</h1>
-            <h2>Instructions</h2>
-                <p class="lead">Use the alphabet to guess the hidden marvel character.<br> 
-                    Or click the button to reveal a clue to the character.
-                </p>
-    </div>
-    <div class="wrapper">
-        <div id="buttons"></div>  
-            <p id="catagoryName"></p>
-        <div id="hold"></div>
-            <p id="mystrikes"></p>
-            <p id="clue">Clue -</p>  
-        <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-        <div class="container">
-            <button id="hint">Hint</button>
-            <button id="reset">Play again</button>
+    <div class="container">
+        <h1 id="title-image">Marvel Hangman Game</h1>
+        <div class="row">
+            <div class="col-md-6 gameplay-column">
+                <h4>Wins</h4>
+                <h5 id="totalWins"></h5>
+                <h4>Losses</h4>
+                <h5 id="totalLosses"></h5>
+                <h4>Current Character</h4>
+                <h3 id="currentCharacter"></h3>
+                <h4>Strikes Remaining</h4>
+                <h6 id="remainingStrikes"></h6>
+            </div>
+            <div class="col-md-6 gameplay-column">
+                <!-- <img id="youwin-image" src="assets/images/you-win.png" alt="Winning Image" />
+                <img id="gameover-image" src="assets/images/gameover.png" alt="Game Over Image" /> -->
+                <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
+                <img id="hangmanImage" src="" alt="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 gameplay-alphabet">
+                <h4>Alphabet</h4>
+                 <div id="buttons"></div>  
+            </div>
         </div>
     </div>
-</main>
+
+ <!--============= Javascripts Links for the Game ===============================--> 
+    <script>play()</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"crossorigin="anonymous"></script>
+   
 <!--================ End of Main Content Container =========================-->  
 </body>
-<!--============= Javascripts Links for the Game ===============================-->
-        
-            
-
-        
 </html>
