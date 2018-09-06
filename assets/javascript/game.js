@@ -74,7 +74,7 @@ var showStrikes = function ()
     if (strikes < 1) 
     {
       remainStrikes.innerHTML = "Game Over";
-      letters.setAttribute("class", "disabled");
+      letters.setAttribute("class", "disabled"); // disable the alphabet buttons
       losses += 1;   
       console.log(losses); 
     }
@@ -85,7 +85,7 @@ var showStrikes = function ()
       if (counter + space === storedGeusses.length)
       {
         remainStrikes.innerHTML = "You Win!"; 
-        letters.setAttribute("class", "disabled");
+        letters.setAttribute("class", "disabled"); // disable the alphabet buttons
       }  
     } 
 
@@ -109,6 +109,8 @@ var check = function ()
       var geuss = (this.innerHTML);
       this.setAttribute("class", "active");
       this.onclick = null;
+
+      // This loops through the word and checks to see if a user guess matching the current word
       for (var i = 0; i < characterWord.length; i++) 
       {
         if (characterWord[i] === geuss) 
@@ -118,6 +120,8 @@ var check = function ()
         } 
       }
       var j = (characterWord.indexOf(geuss));
+
+      // Conditional loop if the guesses doesn't match then subtract a strike and call the proceeding functions
       if (j === -1) 
       {
         strikes -= 1;
@@ -138,7 +142,7 @@ var animate = function ()
 }
 
   
-// Draw the canvas hangman
+// Draw the canvas hangman character
 drawHangman =  function()
 {
     myHangman = document.getElementById("hangman");
@@ -200,19 +204,24 @@ draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
    leftLeg = function() {
      draw (60, 70, 20, 100);
    };
+
+// The array to draw the hangman character as the user guessed wrong
 drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1];  
 
 // Play the marvel hangman game
 play = function () 
 {
+    // array of words
     var characterList = ["spiderman","iron man", "thor","hulk","black-widow","hawkeye", "black-panther", "vision", "scarlet-witch", "captain-america", "falcon", "dr-strange", "hank-pym", "quicksilver", "she-hulk", "wasp", "human-torch", "invisible-women", "mr-fantastic", "thing", "silver-surfer", "luke-cage", "daredevil", "electra", "loki", "nick-fury", "ghost-rider"];  
 
+    // random pick the current word from the characterlist
     characterWord = characterList[Math.floor(Math.random() * characterList.length)];
     word = characterWord[Math.floor(Math.random() * characterWord.length)];
     word = word.replace(/\s/g, "_");
    
     console.log(characterWord);
    
+    // Set up the game play and call proceeding functions
     buttons();
     storedGeusses = [ ];
     strikes = 10;
@@ -224,8 +233,11 @@ play = function ()
     showStrikes();
     drawHangman();
 };
+
+// Start the game
 play();
-// Reset the game play
+
+// Reset the game play by clicking the play again button
 document.getElementById("reset").onclick = function() 
 {
     correct.parentNode.removeChild(correct);
