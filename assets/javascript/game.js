@@ -74,11 +74,12 @@ var showStrikes = function ()
     // Conditional loop to increment losses and tell user game is over
     if (strikes < 1) 
     {
-      remainStrikes.innerHTML = "Game Over! The word was " + characterWord;
+      remainStrikes.innerHTML = "Game Over!"; // Update that the game is over
+      wordHolder.innerHTML = characterWord;
       letters.setAttribute("class", "disabled"); // disable the alphabet buttons
       losses += 1;  // increment the losses by one
 
-      console.log(losses); 
+      console.log(losses); // Testing losses
     }
     
     // For loop to check if stored user guess matches the random word
@@ -99,7 +100,7 @@ var showStrikes = function ()
     if(storedGeusses.length === (counter + space))
     {  
         win.innerHTML = wins++;
-        console.log(wins);
+        console.log(wins); // testing wins
     } 
 };
 
