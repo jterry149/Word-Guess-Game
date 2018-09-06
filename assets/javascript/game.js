@@ -74,9 +74,10 @@ var showStrikes = function ()
     // Conditional loop to increment losses and tell user game is over
     if (strikes < 1) 
     {
-      remainStrikes.innerHTML = "Game Over";
+      remainStrikes.innerHTML = "Game Over! The word was " + characterWord;
       letters.setAttribute("class", "disabled"); // disable the alphabet buttons
-      losses += 1;   
+      losses += 1;  // increment the losses by one
+
       console.log(losses); 
     }
     
