@@ -20,6 +20,7 @@ var buttons = function()
     myButtons = document.getElementById("buttons");
     letters = document.createElement("ul");
 
+    // A loop to make the alphabet buttons for the game
     for (var i = 0; i < alphabet.length; i++) 
     {
         letters.id = "alphabet";
